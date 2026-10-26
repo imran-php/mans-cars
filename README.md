@@ -1,6 +1,7 @@
 # MANS CARS 015 — аренда автомобилей с онлайн-бронированием
 
-**Демо:** https://mans-cars-015-portfolio.netlify.app
+**Сайт:** https://imran-php.github.io/mans-cars/ (витрина)  
+**Полная версия с бронированием:** https://mans-cars-015-portfolio.netlify.app
 
 Сайт проката авто с календарём занятости и панелью владельца для управления бронями.
 
