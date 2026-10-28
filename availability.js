@@ -56,7 +56,7 @@
       bookingStatus.textContent = item.status === 'booked' ? 'Забронирована на эти даты. Выберите другой период.' : item.status === 'free' ? 'Свободна на выбранные даты. Можно отправить запрос.' : 'Календарь ещё не подтверждён. Уточните наличие у менеджера.';
       bookingStatus.dataset.state = item.status;
       submit.disabled = item.status === 'booked';
-      submit.textContent = item.status === 'unknown' ? 'Уточнить в WhatsApp ↗' : 'Продолжить в WhatsApp ↗';
+      submit.textContent = item.status === 'unknown' ? 'Уточнить в WhatsApp' : 'Продолжить в WhatsApp';
       if (item.periods.length) {
         const title = document.createElement('p'); title.textContent = 'Занятые даты (включительно):'; periods.append(title);
         const list = document.createElement('ul');
@@ -67,7 +67,7 @@
     } catch {
       if (sequence !== bookingSequence) return null;
       bookingStatus.textContent = 'Календарь недоступен. Наличие можно уточнить в WhatsApp.';
-      bookingStatus.dataset.state = 'unknown'; submit.disabled = false; submit.textContent = 'Уточнить в WhatsApp ↗';
+      bookingStatus.dataset.state = 'unknown'; submit.disabled = false; submit.textContent = 'Уточнить в WhatsApp';
       return { status: 'unknown' };
     }
   }
